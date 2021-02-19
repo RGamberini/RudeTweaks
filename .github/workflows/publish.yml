@@ -8,15 +8,6 @@ jobs:
     name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        id: test
-        run: |
-          export FOO=$(echo "dickass"|cut -c3-5)
-
-      - name: Test2
-        id: test2
-        run: echo "$FOO"
-
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project # This would actually build your project, using zip for an example artifact
@@ -29,8 +20,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: Release-${{ github.sha }}
-          release_name: Release-${{ github.sha }}
+          tag_name: Release-${{ github.run_number }}
+          release_name: Release-${{ github.run_number }}
           draft: false
           prerelease: false
 
