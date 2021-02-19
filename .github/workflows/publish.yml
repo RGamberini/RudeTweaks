@@ -11,12 +11,18 @@ jobs:
       - name: Test
         id: test
         run: |
-          echo "$GITHUB_SHA"
+          export FOO = $(echo "dickass" | cut -c3-5)
+
+      - name: Test2
+        id: test2
+        run: echo "$FOO"
+
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
           zip --junk-paths RudeTweaks ./*
+          
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -27,6 +33,7 @@ jobs:
           release_name: Release-${{ github.sha }}
           draft: false
           prerelease: false
+
       - name: Upload Release Asset 1
         id: upload-release-asset-1
         uses: actions/upload-release-asset@v1
