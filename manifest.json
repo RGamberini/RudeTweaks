@@ -5,5 +5,8 @@
     "author": "Rude",
     "version": "1.0.0",
     "minimumCoreVersion": "0.7.0",
-    "esmodules": ["RudeTweaks.js"]
+    "esmodules": ["RudeTweaks.js"],
+    "url": "https://github.com/RGamberini/RudeTweaks/",
+    "manifest": "https://raw.githubusercontent.com/RGamberini/RudeTweaks/main/manifest.json",
+    "download": "https://github.com/RGamberini/RudeTweaks/releases/download/Latest/RudeTweaks.zip"
 }
