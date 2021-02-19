@@ -8,5 +8,5 @@
     "esmodules": ["RudeTweaks.js"],
     "url": "https://github.com/RGamberini/RudeTweaks/",
     "manifest": "https://raw.githubusercontent.com/RGamberini/RudeTweaks/main/manifest.json",
-    "download": "https://github.com/RGamberini/RudeTweaks/releases/download/Latest/RudeTweaks.zip"
+    "download": "https://github.com/RGamberini/RudeTweaks/releases/latest/download/RudeTweaks.zip"
 }
