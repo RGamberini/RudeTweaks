@@ -1,0 +1,4 @@
+{
+    "Rude-Tweaks.FixCombatInitiative": "Fix Combat Initiative",
+    "Rude-Tweaks.FixCombatInitiative_Hint": "Fixes combat initiative; resetting the combat tracker back to turn 0 when initiatives are finished on round 1."
+}

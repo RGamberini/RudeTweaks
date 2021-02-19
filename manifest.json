@@ -1,0 +1,9 @@
+{
+    "name": "RudeTweaks",
+    "title": "Rude's tweaks",
+    "description": "Fix small issues that Rude has problems with",
+    "author": "Rude",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.7.0",
+    "esmodules": ["RudeTweaks.js"]
+}
