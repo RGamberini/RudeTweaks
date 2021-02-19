@@ -8,6 +8,10 @@ jobs:
     name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
+      - name: Test
+        id: test
+        run: |
+          echo "$GITHUB_SHA"
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project # This would actually build your project, using zip for an example artifact
@@ -19,8 +23,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: "Release-$GITHUB_RUN_ID"
-          release_name: "Release-$GITHUB_RUN_ID"
+          tag_name: Release-$GITHUB_SHA
+          release_name: Release-$GITHUB_SHA
           draft: false
           prerelease: false
       - name: Upload release binaries
