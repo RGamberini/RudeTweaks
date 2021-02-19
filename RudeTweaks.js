@@ -17,6 +17,7 @@ Hooks.on("updateCombat", (combat) => {
         lastCombatants.some(combatant => combatant.initiative === null) &&
         !combatants.some(combatant => combatant.initiative === null) &&
         !combats.includes(combat)) {
+            console.log("RudeTweaks: Triggering combat turn reset.");
             combat.update({turn: 0});
             combats.push(combat);
     }
