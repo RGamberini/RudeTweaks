@@ -1,4 +1,4 @@
-import {registerSettings} from "settings.js";
+import {registerSettings} from "./settings.js";
 Hooks.once('init', function() {
     console.log("REGISTERING SETTINGS IN 'RudeTweaks.js'");
     registerSettings();
