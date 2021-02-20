@@ -1,4 +1,5 @@
 export const registerSettings = function() {
+    console.log("REGISTERING SETTINGS IN 'settings.js'");
     //initialize all settings
     game.settings.register('RudeTweaks','FixCombatInitiative', {
         name: "RudeTweaks.FixCombatInitiative",
