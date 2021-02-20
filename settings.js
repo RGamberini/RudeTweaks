@@ -9,4 +9,13 @@ export const registerSettings = function() {
         default: true,
         type: Boolean
     });
+
+    game.settings.register('RudeTweaks','DisablePause', {
+        name: "RudeTweaks.DisablePause",
+        hint: "RudeTweaks.DisablePause_Hint",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean
+    });
 };  
