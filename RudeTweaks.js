@@ -27,8 +27,10 @@ Hooks.on("updateCombat", (combat) => {
 
 Hooks.on("createChatMessage", (message) => {
     if (!game.settings.get("RudeTweaks", "HideAttackRollResult")) return;
-    let whisper = message.data.whisper.length > 0;
-    let attackroll = message.data.flags["midi-qol"] && message.data.flags["midi-qol"].waitForDiceSoNice !== undefined;
-    if (game.user.isGM || (whisper && !attackroll))
-        document.querySelector(`[data-message-id="${message.data._id}"]`).style = "display: inherit";
+    setTimeout(() => {
+        let whisper = message.data.whisper.length > 0;
+        let attackroll = message.data.flags["midi-qol"] && message.data.flags["midi-qol"].waitForDiceSoNice !== undefined;
+        if (game.user.isGM || (whisper && !attackroll))
+            document.querySelector(`[data-message-id="${message.data._id}"]`).style = "display: inherit";
+        }, 100);
 });
