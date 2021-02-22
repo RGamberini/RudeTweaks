@@ -26,8 +26,8 @@ Hooks.once('init', function() {
 
 Hooks.once('ready', () => {
     if (!game.settings.get("RudeTweaks", "SensibleDefaults") || game.user.isGM) return;
-    game.settings.set("showHudTitle", false);
-    game.settings.set("alwaysShowAdditionalCategories", false);
+    game.settings.set("token-action-hud", "showHudTitle", false);
+    game.settings.set("token-action-hud", "alwaysShowAdditionalCategories", false);
     game.settings.set("easy-target", "release", "standard");
 });
 
