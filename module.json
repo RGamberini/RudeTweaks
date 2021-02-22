@@ -3,8 +3,9 @@
     "title": "Rude's tweaks",
     "description": "Fix small issues that Rude has problems with",
     "author": "Rude",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "minimumCoreVersion": "0.7.0",
+    "compatibleCoreVersion":"0.7.9",
     "esmodules": ["./RudeTweaks.js"],
     "url": "https://github.com/RGamberini/RudeTweaks/",
     "languages": [
