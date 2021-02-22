@@ -6,6 +6,31 @@ Hooks.once('init', function() {
         document.head.insertAdjacentHTML("beforeend", `<style>.whisper {display: none;}</style>`);
 });
 
+// Hooks.once('ready', () => {
+//     let choices = {};
+//     Array.from(game.settings.settings.values())
+//         .filter(setting => setting.scope === "client")
+//         .forEach(option => choices[option.key] = option.name);
+//     game.settings.register("RudeTweaks", "ConfigureDefaults", {
+//         name: "Configure Client Side Defaults",
+//         hint: "dick hands",
+//         scope: "world",      // This specifies a world-level setting
+//         config: true,        // This specifies that the setting appears in the configuration view
+//         type: String,
+//         choices: choices,
+//         onChange: value => { // A callback function which triggers when the setting is changed
+//           console.log(value)
+//         }
+//       });
+// });
+
+Hooks.once('ready', () => {
+    if (!game.settings.get("RudeTweaks", "SensibleDefaults") || game.user.isGM) return;
+    game.settings.set("showHudTitle", false);
+    game.settings.set("alwaysShowAdditionalCategories", false);
+    game.settings.set("easy-target", "release", "standard");
+});
+
 let lastCombat;
 const combats = [];
 Hooks.on("updateCombat", (combat) => {
@@ -30,7 +55,9 @@ Hooks.on("createChatMessage", (message) => {
     setTimeout(() => {
         let whisper = message.data.whisper.length > 0;
         let attackroll = message.data.flags["midi-qol"] && message.data.flags["midi-qol"].waitForDiceSoNice !== undefined;
-        if (game.user.isGM || (whisper && !attackroll))
+        if (game.user.isGM || (whisper && !attackroll)) {
             document.querySelector(`[data-message-id="${message.data._id}"]`).style = "display: inherit";
-        }, 100);
+            ui.chat.scrollBottom(); 
+        }
+    }, 100);
 });

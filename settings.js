@@ -18,4 +18,13 @@ export const registerSettings = function() {
         default: false,
         type: Boolean
     });
-};  
+
+    game.settings.register('RudeTweaks','SensibleDefaults', {
+        name: "RudeTweaks.SensibleDefaults",
+        hint: "RudeTweaks.SensibleDefaults_Hint",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean
+    });
+};
