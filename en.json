@@ -1,6 +1,6 @@
 {
-    "Rude-Tweaks.FixCombatInitiative": "Fix Combat Initiative",
-    "Rude-Tweaks.FixCombatInitiative_Hint": "Fixes combat initiative; resetting the combat tracker back to turn 0 when initiatives are finished on round 1.",
-    "RudeTweaks.DisablePause": "Disable Pause",
-    "RudeTweaks.DisablePause_Hint": "Disables the pause feature"
+    "RudeTweaks.FixCombatInitiative": "Fix Combat Initiative",
+    "RudeTweaks.FixCombatInitiative_Hint": "Fixes combat initiative; resetting the combat tracker back to turn 0 when initiatives are finished on round 1.",
+    "RudeTweaks.HideAttackRollResult": "Hide Attack Roll Results",
+    "RudeTweaks.HideAttackRollResult_Hint": "Hides whether or not an attack roll hits."
 }

@@ -10,9 +10,9 @@ export const registerSettings = function() {
         type: Boolean
     });
 
-    game.settings.register('RudeTweaks','DisablePause', {
-        name: "RudeTweaks.DisablePause",
-        hint: "RudeTweaks.DisablePause_Hint",
+    game.settings.register('RudeTweaks','HideAttackRollResult', {
+        name: "RudeTweaks.HideAttackRollResult",
+        hint: "RudeTweaks.HideAttackRollResult_Hint",
         scope: "world",
         config: true,
         default: false,
